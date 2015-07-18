@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance_km: 1
+  line_item_id: 
+  notes: MyText
+
+two:
+  distance_km: 1
+  line_item_id: 
+  notes: MyText
