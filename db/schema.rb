@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718062840) do
+ActiveRecord::Schema.define(version: 20150720020951) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20150718062840) do
   end
 
   add_index "disposal_sites", ["material_id"], name: "index_disposal_sites_on_material_id", using: :btree
+
+  create_table "ducks", force: :cascade do |t|
+    t.integer  "wings",      limit: 4
+    t.string   "name",       limit: 255
+    t.text     "story",      limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "invoices", force: :cascade do |t|
     t.integer  "order_id",   limit: 4
