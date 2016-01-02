@@ -34,5 +34,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'rspec-rails', '~> 3.4.0'
   gem 'pry'
+  gem 'zeus'
+  gem 'parallel_tests'
+  gem 'zeus-parallel_tests'
+  gem 'guard-rspec', require: false
+end
+
+group :test do
+  gem 'capybara', '~> 2.5.0'
+  gem 'selenium-webdriver', '~> 2.48.1'
 end
 
