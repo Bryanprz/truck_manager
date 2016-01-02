@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @client_receipt.number %>
+</p>
+
+<p>
+  <strong>Cubic meters:</strong>
+  <%= @client_receipt.cubic_meters %>
+</p>
+
+<p>
+  <strong>Value per cubic meter:</strong>
+  <%= @client_receipt.value_per_cubic_meter %>
+</p>
+
+<p>
+  <strong>Date worked:</strong>
+  <%= @client_receipt.date_worked %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @client_receipt.order %>
+</p>
+
+<%= link_to 'Edit', edit_client_receipt_path(@client_receipt) %> |
+<%= link_to 'Back', client_receipts_path %>

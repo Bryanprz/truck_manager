@@ -1,0 +1,37 @@
+<%= form_for(@client_receipt) do |f| %>
+  <% if @client_receipt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client_receipt.errors.count, "error") %> prohibited this client_receipt from being saved:</h2>
+
+      <ul>
+      <% @client_receipt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :cubic_meters %><br>
+    <%= f.number_field :cubic_meters %>
+  </div>
+  <div class="field">
+    <%= f.label :value_per_cubic_meter %><br>
+    <%= f.text_field :value_per_cubic_meter %>
+  </div>
+  <div class="field">
+    <%= f.label :date_worked %><br>
+    <%= f.date_select :date_worked %>
+  </div>
+  <div class="field">
+    <%= f.label :order_id %><br>
+    <%= f.text_field :order_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

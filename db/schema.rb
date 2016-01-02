@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720015343) do
+ActiveRecord::Schema.define(version: 20160102233856) do
+
+  create_table "client_receipts", force: :cascade do |t|
+    t.integer  "number",                limit: 4
+    t.float    "cubic_meters",          limit: 24
+    t.float    "value_per_cubic_meter", limit: 24
+    t.date     "date_worked"
+    t.integer  "order_id",              limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  add_index "client_receipts", ["order_id"], name: "index_client_receipts_on_order_id", using: :btree
 
   create_table "clients", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -141,6 +153,7 @@ ActiveRecord::Schema.define(version: 20150720015343) do
     t.datetime "updated_at",               null: false
   end
 
+  add_foreign_key "client_receipts", "orders"
   add_foreign_key "line_items", "orders"
   add_foreign_key "orders", "clients"
   add_foreign_key "trips", "line_items"

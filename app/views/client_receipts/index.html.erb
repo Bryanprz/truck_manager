@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Client Receipts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Cubic meters</th>
+      <th>Value per cubic meter</th>
+      <th>Date worked</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_receipts.each do |client_receipt| %>
+      <tr>
+        <td><%= client_receipt.number %></td>
+        <td><%= client_receipt.cubic_meters %></td>
+        <td><%= client_receipt.value_per_cubic_meter %></td>
+        <td><%= client_receipt.date_worked %></td>
+        <td><%= client_receipt.order %></td>
+        <td><%= link_to 'Show', client_receipt %></td>
+        <td><%= link_to 'Edit', edit_client_receipt_path(client_receipt) %></td>
+        <td><%= link_to 'Destroy', client_receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client receipt', new_client_receipt_path %>
