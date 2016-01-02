@@ -6,9 +6,10 @@ RSpec.describe "clients/new", type: :view do
   end
 
   it "renders new client form" do
-    render
-
-    assert_select "form[action=?][method=?]", clients_path, "post" do
-    end
+    visit '/nuevo_cliente'
+    fill_in('Nuevo Cliente', with: 'Acme')
+    click_on 'Agregar'
+    expect(page).to have_content('Clientes')
+    expect(page).to have_content('Acme')
   end
 end
