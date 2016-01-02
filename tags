@@ -1,0 +1,157 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+20150718055132_create_trucks.rb	db/migrate/20150718055132_create_trucks.rb	1;"	F
+20150718055731_create_users.rb	db/migrate/20150718055731_create_users.rb	1;"	F
+20150718055750_create_clients.rb	db/migrate/20150718055750_create_clients.rb	1;"	F
+20150718060120_create_orders.rb	db/migrate/20150718060120_create_orders.rb	1;"	F
+20150718060228_create_line_items.rb	db/migrate/20150718060228_create_line_items.rb	1;"	F
+20150718060255_create_materials.rb	db/migrate/20150718060255_create_materials.rb	1;"	F
+20150718060338_create_invoices.rb	db/migrate/20150718060338_create_invoices.rb	1;"	F
+20150718060513_create_payments.rb	db/migrate/20150718060513_create_payments.rb	1;"	F
+20150718060806_create_pickup_sites.rb	db/migrate/20150718060806_create_pickup_sites.rb	1;"	F
+20150718060828_create_disposal_sites.rb	db/migrate/20150718060828_create_disposal_sites.rb	1;"	F
+20150718060917_create_notes.rb	db/migrate/20150718060917_create_notes.rb	1;"	F
+20150718061451_create_truck_capacities.rb	db/migrate/20150718061451_create_truck_capacities.rb	1;"	F
+20150718062840_create_trips.rb	db/migrate/20150718062840_create_trips.rb	1;"	F
+20150720015343_create_ducks.rb	db/migrate/20150720015343_create_ducks.rb	1;"	F
+404.html	public/404.html	1;"	F
+422.html	public/422.html	1;"	F
+500.html	public/500.html	1;"	F
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:TruckManager
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Client	app/models/client.rb	/^class Client < ActiveRecord::Base$/;"	c
+ClientTest	test/models/client_test.rb	/^class ClientTest < ActiveSupport::TestCase$/;"	c
+CreateClients	db/migrate/20150718055750_create_clients.rb	/^class CreateClients < ActiveRecord::Migration$/;"	c
+CreateDisposalSites	db/migrate/20150718060828_create_disposal_sites.rb	/^class CreateDisposalSites < ActiveRecord::Migration$/;"	c
+CreateDucks	db/migrate/20150720015343_create_ducks.rb	/^class CreateDucks < ActiveRecord::Migration$/;"	c
+CreateInvoices	db/migrate/20150718060338_create_invoices.rb	/^class CreateInvoices < ActiveRecord::Migration$/;"	c
+CreateLineItems	db/migrate/20150718060228_create_line_items.rb	/^class CreateLineItems < ActiveRecord::Migration$/;"	c
+CreateMaterials	db/migrate/20150718060255_create_materials.rb	/^class CreateMaterials < ActiveRecord::Migration$/;"	c
+CreateNotes	db/migrate/20150718060917_create_notes.rb	/^class CreateNotes < ActiveRecord::Migration$/;"	c
+CreateOrders	db/migrate/20150718060120_create_orders.rb	/^class CreateOrders < ActiveRecord::Migration$/;"	c
+CreatePayments	db/migrate/20150718060513_create_payments.rb	/^class CreatePayments < ActiveRecord::Migration$/;"	c
+CreatePickupSites	db/migrate/20150718060806_create_pickup_sites.rb	/^class CreatePickupSites < ActiveRecord::Migration$/;"	c
+CreateTrips	db/migrate/20150718062840_create_trips.rb	/^class CreateTrips < ActiveRecord::Migration$/;"	c
+CreateTruckCapacities	db/migrate/20150718061451_create_truck_capacities.rb	/^class CreateTruckCapacities < ActiveRecord::Migration$/;"	c
+CreateTrucks	db/migrate/20150718055132_create_trucks.rb	/^class CreateTrucks < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20150718055731_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+DisposalSite	app/models/disposal_site.rb	/^class DisposalSite < ActiveRecord::Base$/;"	c
+DisposalSiteTest	test/models/disposal_site_test.rb	/^class DisposalSiteTest < ActiveSupport::TestCase$/;"	c
+Duck	app/models/duck.rb	/^class Duck < ActiveRecord::Base$/;"	c
+DuckTest	test/models/duck_test.rb	/^class DuckTest < ActiveSupport::TestCase$/;"	c
+DucksController	app/controllers/ducks_controller.rb	/^class DucksController < ApplicationController$/;"	c
+DucksControllerTest	test/controllers/ducks_controller_test.rb	/^class DucksControllerTest < ActionController::TestCase$/;"	c
+DucksHelper	app/helpers/ducks_helper.rb	/^module DucksHelper$/;"	m
+Invoice	app/models/invoice.rb	/^class Invoice < ActiveRecord::Base$/;"	c
+InvoiceTest	test/models/invoice_test.rb	/^class InvoiceTest < ActiveSupport::TestCase$/;"	c
+LineItem	app/models/line_item.rb	/^class LineItem < ActiveRecord::Base$/;"	c
+LineItemTest	test/models/line_item_test.rb	/^class LineItemTest < ActiveSupport::TestCase$/;"	c
+Material	app/models/material.rb	/^class Material < ActiveRecord::Base$/;"	c
+MaterialTest	test/models/material_test.rb	/^class MaterialTest < ActiveSupport::TestCase$/;"	c
+Note	app/models/note.rb	/^class Note < ActiveRecord::Base$/;"	c
+NoteTest	test/models/note_test.rb	/^class NoteTest < ActiveSupport::TestCase$/;"	c
+Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+OrderTest	test/models/order_test.rb	/^class OrderTest < ActiveSupport::TestCase$/;"	c
+Payment	app/models/payment.rb	/^class Payment < ActiveRecord::Base$/;"	c
+PaymentTest	test/models/payment_test.rb	/^class PaymentTest < ActiveSupport::TestCase$/;"	c
+PickupSite	app/models/pickup_site.rb	/^class PickupSite < ActiveRecord::Base$/;"	c
+PickupSiteTest	test/models/pickup_site_test.rb	/^class PickupSiteTest < ActiveSupport::TestCase$/;"	c
+Trip	app/models/trip.rb	/^class Trip < ActiveRecord::Base$/;"	c
+TripTest	test/models/trip_test.rb	/^class TripTest < ActiveSupport::TestCase$/;"	c
+Truck	app/models/truck.rb	/^class Truck < ActiveRecord::Base$/;"	c
+TruckCapacity	app/models/truck_capacity.rb	/^class TruckCapacity < ActiveRecord::Base$/;"	c
+TruckCapacityTest	test/models/truck_capacity_test.rb	/^class TruckCapacityTest < ActiveSupport::TestCase$/;"	c
+TruckManager	config/application.rb	/^module TruckManager$/;"	m
+TruckTest	test/models/truck_test.rb	/^class TruckTest < ActiveSupport::TestCase$/;"	c
+TrucksController	app/controllers/trucks_controller.rb	/^class TrucksController < ApplicationController$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+application.rb	config/application.rb	1;"	F
+application_controller.rb	app/controllers/application_controller.rb	1;"	F
+application_helper.rb	app/helpers/application_helper.rb	1;"	F
+assets.rb	config/initializers/assets.rb	1;"	F
+backtrace_silencers.rb	config/initializers/backtrace_silencers.rb	1;"	F
+boot.rb	config/boot.rb	1;"	F
+bundle	bin/bundle	1;"	F
+change	db/migrate/20150718055132_create_trucks.rb	/^  def change$/;"	f	class:CreateTrucks
+change	db/migrate/20150718055731_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20150718055750_create_clients.rb	/^  def change$/;"	f	class:CreateClients
+change	db/migrate/20150718060120_create_orders.rb	/^  def change$/;"	f	class:CreateOrders
+change	db/migrate/20150718060228_create_line_items.rb	/^  def change$/;"	f	class:CreateLineItems
+change	db/migrate/20150718060255_create_materials.rb	/^  def change$/;"	f	class:CreateMaterials
+change	db/migrate/20150718060338_create_invoices.rb	/^  def change$/;"	f	class:CreateInvoices
+change	db/migrate/20150718060513_create_payments.rb	/^  def change$/;"	f	class:CreatePayments
+change	db/migrate/20150718060806_create_pickup_sites.rb	/^  def change$/;"	f	class:CreatePickupSites
+change	db/migrate/20150718060828_create_disposal_sites.rb	/^  def change$/;"	f	class:CreateDisposalSites
+change	db/migrate/20150718060917_create_notes.rb	/^  def change$/;"	f	class:CreateNotes
+change	db/migrate/20150718061451_create_truck_capacities.rb	/^  def change$/;"	f	class:CreateTruckCapacities
+change	db/migrate/20150718062840_create_trips.rb	/^  def change$/;"	f	class:CreateTrips
+change	db/migrate/20150720015343_create_ducks.rb	/^  def change$/;"	f	class:CreateDucks
+client.rb	app/models/client.rb	1;"	F
+client_test.rb	test/models/client_test.rb	1;"	F
+cookies_serializer.rb	config/initializers/cookies_serializer.rb	1;"	F
+create	app/controllers/ducks_controller.rb	/^  def create$/;"	f	class:DucksController
+destroy	app/controllers/ducks_controller.rb	/^  def destroy$/;"	f	class:DucksController
+development.rb	config/environments/development.rb	1;"	F
+disposal_site.rb	app/models/disposal_site.rb	1;"	F
+disposal_site_test.rb	test/models/disposal_site_test.rb	1;"	F
+duck.rb	app/models/duck.rb	1;"	F
+duck_params	app/controllers/ducks_controller.rb	/^    def duck_params$/;"	f	class:DucksController
+duck_test.rb	test/models/duck_test.rb	1;"	F
+ducks.coffee	app/assets/javascripts/ducks.coffee	1;"	F
+ducks_controller.rb	app/controllers/ducks_controller.rb	1;"	F
+ducks_controller_test.rb	test/controllers/ducks_controller_test.rb	1;"	F
+ducks_helper.rb	app/helpers/ducks_helper.rb	1;"	F
+edit	app/controllers/ducks_controller.rb	/^  def edit$/;"	f	class:DucksController
+environment.rb	config/environment.rb	1;"	F
+filter_parameter_logging.rb	config/initializers/filter_parameter_logging.rb	1;"	F
+index	app/controllers/ducks_controller.rb	/^  def index$/;"	f	class:DucksController
+index	app/controllers/trucks_controller.rb	/^  def index$/;"	f	class:TrucksController
+inflections.rb	config/initializers/inflections.rb	1;"	F
+invoice.rb	app/models/invoice.rb	1;"	F
+invoice_test.rb	test/models/invoice_test.rb	1;"	F
+line_item.rb	app/models/line_item.rb	1;"	F
+line_item_test.rb	test/models/line_item_test.rb	1;"	F
+material.rb	app/models/material.rb	1;"	F
+material_test.rb	test/models/material_test.rb	1;"	F
+mime_types.rb	config/initializers/mime_types.rb	1;"	F
+new	app/controllers/ducks_controller.rb	/^  def new$/;"	f	class:DucksController
+note.rb	app/models/note.rb	1;"	F
+note_test.rb	test/models/note_test.rb	1;"	F
+order.rb	app/models/order.rb	1;"	F
+order_test.rb	test/models/order_test.rb	1;"	F
+payment.rb	app/models/payment.rb	1;"	F
+payment_test.rb	test/models/payment_test.rb	1;"	F
+pickup_site.rb	app/models/pickup_site.rb	1;"	F
+pickup_site_test.rb	test/models/pickup_site_test.rb	1;"	F
+production.rb	config/environments/production.rb	1;"	F
+rails	bin/rails	1;"	F
+rake	bin/rake	1;"	F
+routes.rb	config/routes.rb	1;"	F
+schema.rb	db/schema.rb	1;"	F
+seeds.rb	db/seeds.rb	1;"	F
+session_store.rb	config/initializers/session_store.rb	1;"	F
+set_duck	app/controllers/ducks_controller.rb	/^    def set_duck$/;"	f	class:DucksController
+setup	bin/setup	1;"	F
+show	app/controllers/ducks_controller.rb	/^  def show$/;"	f	class:DucksController
+show	app/controllers/trucks_controller.rb	/^  def show$/;"	f	class:TrucksController
+spring	bin/spring	1;"	F
+test.rb	config/environments/test.rb	1;"	F
+test_helper.rb	test/test_helper.rb	1;"	F
+trip.rb	app/models/trip.rb	1;"	F
+trip_test.rb	test/models/trip_test.rb	1;"	F
+truck.rb	app/models/truck.rb	1;"	F
+truck_capacity.rb	app/models/truck_capacity.rb	1;"	F
+truck_capacity_test.rb	test/models/truck_capacity_test.rb	1;"	F
+truck_test.rb	test/models/truck_test.rb	1;"	F
+trucks_controller.rb	app/controllers/trucks_controller.rb	1;"	F
+update	app/controllers/ducks_controller.rb	/^  def update$/;"	f	class:DucksController
+user.rb	app/models/user.rb	1;"	F
+user_test.rb	test/models/user_test.rb	1;"	F
+wrap_parameters.rb	config/initializers/wrap_parameters.rb	1;"	F

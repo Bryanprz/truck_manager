@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :clients
+
   resources :ducks
 
   resources :trucks, only: [:index, :show, :edit, :new]
