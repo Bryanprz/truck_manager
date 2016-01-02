@@ -3,7 +3,7 @@ class CreateInvoices < ActiveRecord::Migration
     create_table :invoices do |t|
       t.references :order, index: true
       t.float :amount
-      t.date :date
+      t.date :date_worked
       t.date :due_date
       t.text :notes
 

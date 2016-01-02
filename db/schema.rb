@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 20150720015343) do
   add_index "disposal_sites", ["material_id"], name: "index_disposal_sites_on_material_id", using: :btree
 
   create_table "invoices", force: :cascade do |t|
-    t.integer  "order_id",   limit: 4
-    t.float    "amount",     limit: 24
-    t.date     "date"
+    t.integer  "order_id",    limit: 4
+    t.float    "amount",      limit: 24
+    t.date     "date_worked"
     t.date     "due_date"
-    t.text     "notes",      limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "notes",       limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "invoices", ["order_id"], name: "index_invoices_on_order_id", using: :btree
