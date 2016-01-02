@@ -32,9 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do
-  gem 'rspec-rails', '~> 3.4.0'
   gem 'pry'
-  gem 'zeus'
+  gem 'rspec-rails', '~> 3.4.0'
+  gem 'zeus', '~> 0.15.4'
   gem 'parallel_tests'
   gem 'zeus-parallel_tests'
   gem 'guard-rspec', require: false
@@ -44,4 +44,3 @@ group :test do
   gem 'capybara', '~> 2.5.0'
   gem 'selenium-webdriver', '~> 2.48.1'
 end
-
