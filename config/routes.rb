@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :orders
-
+  root :to => "clients#index"
   resources :invoices
 
-  resources :clients
+  resources :clients do
+    resources :orders
+  end
 
   resources :ducks
 

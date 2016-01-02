@@ -1,4 +1,7 @@
+<h2><%= @client.name %></h2>
+
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Nueva Orden', new_client_order_path(@client) %><br />
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
