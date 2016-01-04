@@ -1,4 +1,8 @@
 <h2><%= @client.name %></h2>
+<h3>Ordenes</h3>
+<% @client.orders.each do |order|  %>
+  <%= order.order_date %><br />
+<% end %>
 
 <p id="notice"><%= notice %></p>
 
