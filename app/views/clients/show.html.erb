@@ -1,7 +1,7 @@
 <h2><%= @client.name %></h2>
 <h3>Ordenes</h3>
 <% @client.orders.each do |order|  %>
-  <%= order.order_date %><br />
+  <%= link_to order.order_date, client_order_path(@client, order) %><br />
 <% end %>
 
 <p id="notice"><%= notice %></p>

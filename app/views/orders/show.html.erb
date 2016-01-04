@@ -1,3 +1,9 @@
+<h2>Orden <%= @order.order_date %> para <%= @order.client.name %></h2>
+
+Start date: <%= @order.start_date %><br />
+End_date: <%= @order.end_date %><br />
+Recibo: <%= @order.client_receipt %>
+
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Edit', edit_client_order_path(@order.client, @order) %> |
