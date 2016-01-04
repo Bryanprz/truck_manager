@@ -1,4 +1,4 @@
-<%= form_for(@client_receipt) do |f| %>
+<%= form_for [@client, @order, @client_receipt] do |f| %>
   <% if @client_receipt.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@client_receipt.errors.count, "error") %> prohibited this client_receipt from being saved:</h2>
@@ -26,10 +26,6 @@
   <div class="field">
     <%= f.label :date_worked %><br>
     <%= f.date_select :date_worked %>
-  </div>
-  <div class="field">
-    <%= f.label :order_id %><br>
-    <%= f.text_field :order_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

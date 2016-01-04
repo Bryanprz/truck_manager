@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<h2>Recibo <%= @client_receipt.number %> para <%= @client.name %></h2>
 
 <p>
   <strong>Number:</strong>
@@ -21,9 +22,10 @@
 </p>
 
 <p>
-  <strong>Order:</strong>
-  <%= @client_receipt.order %>
+  <strong>Orden:</strong>
+  <%= @order.order_date %>
 </p>
 
-<%= link_to 'Edit', edit_client_receipt_path(@client_receipt) %> |
-<%= link_to 'Back', client_receipts_path %>
+
+<%= link_to 'Edit', edit_client_order_client_receipt_path(@client, @order, @client_receipt) %> |
+<%= link_to 'Back', client_order_client_receipts_path %>

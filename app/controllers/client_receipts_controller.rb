@@ -1,5 +1,7 @@
 class ClientReceiptsController < ApplicationController
   before_action :set_client_receipt, only: [:show, :edit, :update, :destroy]
+  before_action :set_client
+  before_action :set_order
 
   # GET /client_receipts
   # GET /client_receipts.json
@@ -28,7 +30,7 @@ class ClientReceiptsController < ApplicationController
 
     respond_to do |format|
       if @client_receipt.save
-        format.html { redirect_to @client_receipt, notice: 'Client receipt was successfully created.' }
+        format.html { redirect_to client_order_client_receipt_path(@client, @order, @client_receipt), notice: 'Client receipt was successfully created.' }
         format.json { render :show, status: :created, location: @client_receipt }
       else
         format.html { render :new }
@@ -65,6 +67,14 @@ class ClientReceiptsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_client_receipt
       @client_receipt = ClientReceipt.find(params[:id])
+    end
+
+    def set_client
+      @client = Client.find(params[:client_id])
+    end
+
+    def set_order
+      @order = Order.find(params[:order_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
