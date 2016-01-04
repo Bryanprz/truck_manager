@@ -2,7 +2,7 @@
 
 Start date: <%= @order.start_date %><br />
 End_date: <%= @order.end_date %><br />
-Recibo: <%= @order.client_receipt %>
+<%= link_to 'Crear Recibo', new_client_order_client_receipt_path(@client, @order) %>
 
 <p id="notice"><%= notice %></p>
 
