@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  resources :client_receipts
 
   root :to => "clients#index"
   resources :invoices
 
   resources :clients do
-    resources :orders
+    resources :orders do
+      resources :client_receipts
+    end
   end
-
-  resources :ducks
 
   resources :trucks, only: [:index, :show, :edit, :new]
   # The priority is based upon order of creation: first created -> highest priority.
