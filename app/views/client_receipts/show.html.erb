@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h2>Recibo <%= @client_receipt.number %> para <%= @client.name %></h2>
+<h2>Recibo <%= @client_receipt.number %> para <%= link_to @client.name, @client %></h2>
 
 <p>
   <strong>Number:</strong>
