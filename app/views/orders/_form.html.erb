@@ -12,7 +12,9 @@
   <% end %>
 
   <div class="actions">
-    <%= f.date_select :order_date %>
+    Fecha que orden fue puesta: <%= f.date_select :order_date %><br />
+    Fecha que orden empieza: <%= f.date_select :start_date %><br />
+    Fecha que orden termina: <%= f.date_select :end_date %><br />
     <%= f.submit %>
   </div>
 <% end %>
