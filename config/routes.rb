@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :invoices
 
   resources :clients do
-    resources :orders do
+    resources :orders, except: [:index] do
       resources :client_receipts
     end
   end
