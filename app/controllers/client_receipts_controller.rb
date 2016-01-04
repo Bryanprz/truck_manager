@@ -27,7 +27,7 @@ class ClientReceiptsController < ApplicationController
   # POST /client_receipts.json
   def create
     @client_receipt = ClientReceipt.new(client_receipt_params)
-
+    @order.client_receipt = @client_receipt
     respond_to do |format|
       if @client_receipt.save
         format.html { redirect_to client_order_client_receipt_path(@client, @order, @client_receipt), notice: 'Client receipt was successfully created.' }
