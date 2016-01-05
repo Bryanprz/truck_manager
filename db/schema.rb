@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105081533) do
+ActiveRecord::Schema.define(version: 20160105083009) do
 
   create_table "client_receipts", force: :cascade do |t|
     t.integer  "number",                limit: 4
@@ -90,8 +90,6 @@ ActiveRecord::Schema.define(version: 20160105081533) do
   create_table "orders", force: :cascade do |t|
     t.integer  "client_id",      limit: 4
     t.date     "order_date"
-    t.date     "start_date"
-    t.date     "end_date"
     t.string   "payment_terms",  limit: 255
     t.string   "payment_method", limit: 255
     t.text     "notes",          limit: 65535
