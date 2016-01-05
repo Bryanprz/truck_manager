@@ -41,7 +41,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 end
 
-#silence_warnings do
-  #require 'pry'
-  #IRB = Pry
-#end
+silence_warnings do
+  require 'pry'
+  IRB = Pry
+end
