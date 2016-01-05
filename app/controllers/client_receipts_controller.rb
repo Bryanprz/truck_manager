@@ -30,7 +30,7 @@ class ClientReceiptsController < ApplicationController
     @order.client_receipt = @client_receipt
     respond_to do |format|
       if @client_receipt.save
-        format.html { redirect_to client_order_client_receipt_path(@client, @order, @client_receipt), notice: 'Client receipt was successfully created.' }
+        format.html { redirect_to client_order_path(@client, @order), notice: 'Client receipt was successfully created.' }
         format.json { render :show, status: :created, location: @client_receipt }
       else
         format.html { render :new }
