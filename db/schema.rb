@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160102233856) do
+ActiveRecord::Schema.define(version: 20160105081533) do
 
   create_table "client_receipts", force: :cascade do |t|
     t.integer  "number",                limit: 4
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(version: 20160102233856) do
     t.float    "value_per_cubic_meter", limit: 24
     t.date     "date_worked"
     t.integer  "order_id",              limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "copy_file_name",        limit: 255
+    t.string   "copy_content_type",     limit: 255
+    t.integer  "copy_file_size",        limit: 4
+    t.datetime "copy_updated_at"
   end
 
   add_index "client_receipts", ["order_id"], name: "index_client_receipts_on_order_id", using: :btree

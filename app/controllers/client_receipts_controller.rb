@@ -79,6 +79,6 @@ class ClientReceiptsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_receipt_params
-      params.require(:client_receipt).permit(:number, :cubic_meters, :value_per_cubic_meter, :date_worked, :order_id)
+      params.require(:client_receipt).permit(:number, :cubic_meters, :value_per_cubic_meter, :date_worked, :order_id, :copy)
     end
 end

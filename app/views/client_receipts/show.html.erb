@@ -26,6 +26,10 @@
   <%= @order.order_date %>
 </p>
 
+<p>
+  <strong>Copia Original:</strong>
+  <%= image_tag @client_receipt.copy.url %>
+</p>
 
 <%= link_to 'Edit', edit_client_order_client_receipt_path(@client, @order, @client_receipt) %> |
 <%= link_to 'Back', @client %>

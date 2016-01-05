@@ -22,9 +22,9 @@
         <td><%= client_receipt.value_per_cubic_meter %></td>
         <td><%= client_receipt.date_worked %></td>
         <td><%= client_receipt.order %></td>
-        <td><%= link_to 'Show', client_receipt %></td>
-        <td><%= link_to 'Edit', edit_client_receipt_path(client_receipt) %></td>
-        <td><%= link_to 'Destroy', client_receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', client_order_client_receipt_path(@client, @order, client_receipt) %></td>
+        <td><%= link_to 'Edit', edit_client_order_client_receipt_path(@client, @order, client_receipt) %></td>
+        <td><%= link_to 'Destroy', client_order_client_receipt_path(@client, @order, client_receipt), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Client receipt', new_client_receipt_path %>
+<%= link_to 'New Client receipt', new_client_order_client_receipt_path %>
