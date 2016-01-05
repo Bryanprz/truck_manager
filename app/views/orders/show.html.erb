@@ -1,7 +1,8 @@
 <h2>Orden <%= @order.order_date %> para <%= @order.client.name %></h2>
 
 <% if @order.client_receipt %>
-  Recibo #<%= @order.client_receipt.number %><br />
+  <h3>Recibo #<%= @order.client_receipt.number %></h3>
+  Obra: <%= @order.worksite %><br />
   Metros Cubicos: <%= @order.client_receipt.cubic_meters %><br />
   Valor por Metro Cubico: <%= @order.client_receipt.value_per_cubic_meter %><br />
   Fecha trabajado: <%= @order.client_receipt.date_worked %><br />

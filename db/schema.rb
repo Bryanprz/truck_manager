@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105083009) do
+ActiveRecord::Schema.define(version: 20160105083739) do
 
   create_table "client_receipts", force: :cascade do |t|
     t.integer  "number",                limit: 4
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20160105083009) do
     t.text     "notes",          limit: 65535
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "worksite",       limit: 255
   end
 
   add_index "orders", ["client_id"], name: "index_orders_on_client_id", using: :btree
