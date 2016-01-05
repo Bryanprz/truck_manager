@@ -1,12 +1,11 @@
 <h2>Orden <%= @order.order_date %> para <%= @order.client.name %></h2>
 
-Start date: <%= @order.start_date %><br />
-End_date: <%= @order.end_date %><br />
 <% if @order.client_receipt %>
   Recibo #<%= @order.client_receipt.number %><br />
   Metros Cubicos: <%= @order.client_receipt.cubic_meters %><br />
   Valor por Metro Cubico: <%= @order.client_receipt.value_per_cubic_meter %><br />
   Fecha trabajado: <%= @order.client_receipt.date_worked %><br />
+  Copia Original: <p><%= image_tag @order.client_receipt.copy.url %></p>
 <% else %>
   <%= link_to 'Crear Recibo', new_client_order_client_receipt_path(@client, @order) %>
 <% end %>
