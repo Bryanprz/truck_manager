@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'clients#index'
   devise_for :users
-  root :to => "clients#index"
   resources :invoices
-
   resources :clients do
     resources :orders, except: [:index] do
       resources :client_receipts
     end
   end
-
   resources :trucks, only: [:index, :show, :edit, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
