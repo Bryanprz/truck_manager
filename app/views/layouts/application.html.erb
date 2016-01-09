@@ -7,9 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class='notice'><%= notice %></p>
-  <p class='alert'><%= alert %></p>
-  <%= link_to 'Salir', destroy_user_session_path, method: :delete if user_signed_in? %>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <p class='notice'><%= notice %></p>
+      <p class='alert'><%= alert %></p>
+      <%= link_to 'Salir', destroy_user_session_path, method: :delete if user_signed_in? %>
+    </div>
+  </nav>
 <%= yield %>
 
 </body>
