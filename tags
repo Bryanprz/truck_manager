@@ -18,17 +18,29 @@
 20150718061451_create_truck_capacities.rb	db/migrate/20150718061451_create_truck_capacities.rb	1;"	F
 20150718062840_create_trips.rb	db/migrate/20150718062840_create_trips.rb	1;"	F
 20150720015343_create_ducks.rb	db/migrate/20150720015343_create_ducks.rb	1;"	F
+20160102233856_create_client_receipts.rb	db/migrate/20160102233856_create_client_receipts.rb	1;"	F
+20160105081533_add_attachment_copy_to_client_receipts.rb	db/migrate/20160105081533_add_attachment_copy_to_client_receipts.rb	1;"	F
+20160105083009_remove_start_end_dates_from_orders.rb	db/migrate/20160105083009_remove_start_end_dates_from_orders.rb	1;"	F
+20160105083739_add_worksite_to_orders.rb	db/migrate/20160105083739_add_worksite_to_orders.rb	1;"	F
+20160106074520_add_devise_to_users.rb	db/migrate/20160106074520_add_devise_to_users.rb	1;"	F
 404.html	public/404.html	1;"	F
 422.html	public/422.html	1;"	F
 500.html	public/500.html	1;"	F
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddAttachmentCopyToClientReceipts	db/migrate/20160105081533_add_attachment_copy_to_client_receipts.rb	/^class AddAttachmentCopyToClientReceipts < ActiveRecord::Migration$/;"	c
+AddDeviseToUsers	db/migrate/20160106074520_add_devise_to_users.rb	/^class AddDeviseToUsers < ActiveRecord::Migration$/;"	c
+AddWorksiteToOrders	db/migrate/20160105083739_add_worksite_to_orders.rb	/^class AddWorksiteToOrders < ActiveRecord::Migration$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:TruckManager
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 Client	app/models/client.rb	/^class Client < ActiveRecord::Base$/;"	c
+ClientReceipt	app/models/client_receipt.rb	/^class ClientReceipt < ActiveRecord::Base$/;"	c
+ClientReceiptsController	app/controllers/client_receipts_controller.rb	/^class ClientReceiptsController < ApplicationController$/;"	c
+ClientReceiptsHelper	app/helpers/client_receipts_helper.rb	/^module ClientReceiptsHelper$/;"	m
 ClientTest	test/models/client_test.rb	/^class ClientTest < ActiveSupport::TestCase$/;"	c
 ClientsController	app/controllers/clients_controller.rb	/^class ClientsController < ApplicationController$/;"	c
 ClientsHelper	app/helpers/clients_helper.rb	/^module ClientsHelper$/;"	m
+CreateClientReceipts	db/migrate/20160102233856_create_client_receipts.rb	/^class CreateClientReceipts < ActiveRecord::Migration$/;"	c
 CreateClients	db/migrate/20150718055750_create_clients.rb	/^class CreateClients < ActiveRecord::Migration$/;"	c
 CreateDisposalSites	db/migrate/20150718060828_create_disposal_sites.rb	/^class CreateDisposalSites < ActiveRecord::Migration$/;"	c
 CreateDucks	db/migrate/20150720015343_create_ducks.rb	/^class CreateDucks < ActiveRecord::Migration$/;"	c
@@ -68,6 +80,7 @@ Payment	app/models/payment.rb	/^class Payment < ActiveRecord::Base$/;"	c
 PaymentTest	test/models/payment_test.rb	/^class PaymentTest < ActiveSupport::TestCase$/;"	c
 PickupSite	app/models/pickup_site.rb	/^class PickupSite < ActiveRecord::Base$/;"	c
 PickupSiteTest	test/models/pickup_site_test.rb	/^class PickupSiteTest < ActiveSupport::TestCase$/;"	c
+RemoveStartEndDatesFromOrders	db/migrate/20160105083009_remove_start_end_dates_from_orders.rb	/^class RemoveStartEndDatesFromOrders < ActiveRecord::Migration$/;"	c
 Trip	app/models/trip.rb	/^class Trip < ActiveRecord::Base$/;"	c
 TripTest	test/models/trip_test.rb	/^class TripTest < ActiveSupport::TestCase$/;"	c
 Truck	app/models/truck.rb	/^class Truck < ActiveRecord::Base$/;"	c
@@ -78,6 +91,8 @@ TruckTest	test/models/truck_test.rb	/^class TruckTest < ActiveSupport::TestCase$
 TrucksController	app/controllers/trucks_controller.rb	/^class TrucksController < ApplicationController$/;"	c
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 application.rb	config/application.rb	1;"	F
 application_controller.rb	app/controllers/application_controller.rb	1;"	F
 application_helper.rb	app/helpers/application_helper.rb	1;"	F
@@ -99,8 +114,21 @@ change	db/migrate/20150718060917_create_notes.rb	/^  def change$/;"	f	class:Crea
 change	db/migrate/20150718061451_create_truck_capacities.rb	/^  def change$/;"	f	class:CreateTruckCapacities
 change	db/migrate/20150718062840_create_trips.rb	/^  def change$/;"	f	class:CreateTrips
 change	db/migrate/20150720015343_create_ducks.rb	/^  def change$/;"	f	class:CreateDucks
+change	db/migrate/20160102233856_create_client_receipts.rb	/^  def change$/;"	f	class:CreateClientReceipts
+change	db/migrate/20160105083009_remove_start_end_dates_from_orders.rb	/^  def change$/;"	f	class:RemoveStartEndDatesFromOrders
+change	db/migrate/20160105083739_add_worksite_to_orders.rb	/^  def change$/;"	f	class:AddWorksiteToOrders
 client.rb	app/models/client.rb	1;"	F
 client_params	app/controllers/clients_controller.rb	/^    def client_params$/;"	f	class:ClientsController
+client_receipt.rb	app/models/client_receipt.rb	1;"	F
+client_receipt_params	app/controllers/client_receipts_controller.rb	/^    def client_receipt_params$/;"	f	class:ClientReceiptsController
+client_receipt_spec.rb	spec/models/client_receipt_spec.rb	1;"	F
+client_receipts.coffee	app/assets/javascripts/client_receipts.coffee	1;"	F
+client_receipts_controller.rb	app/controllers/client_receipts_controller.rb	1;"	F
+client_receipts_controller_spec.rb	spec/controllers/client_receipts_controller_spec.rb	1;"	F
+client_receipts_helper.rb	app/helpers/client_receipts_helper.rb	1;"	F
+client_receipts_helper_spec.rb	spec/helpers/client_receipts_helper_spec.rb	1;"	F
+client_receipts_routing_spec.rb	spec/routing/client_receipts_routing_spec.rb	1;"	F
+client_receipts_spec.rb	spec/requests/client_receipts_spec.rb	1;"	F
 client_spec.rb	spec/models/client_spec.rb	1;"	F
 client_test.rb	test/models/client_test.rb	1;"	F
 clients.coffee	app/assets/javascripts/clients.coffee	1;"	F
@@ -111,17 +139,22 @@ clients_helper_spec.rb	spec/helpers/clients_helper_spec.rb	1;"	F
 clients_routing_spec.rb	spec/routing/clients_routing_spec.rb	1;"	F
 clients_spec.rb	spec/requests/clients_spec.rb	1;"	F
 cookies_serializer.rb	config/initializers/cookies_serializer.rb	1;"	F
+create	app/controllers/client_receipts_controller.rb	/^  def create$/;"	f	class:ClientReceiptsController
 create	app/controllers/clients_controller.rb	/^  def create$/;"	f	class:ClientsController
 create	app/controllers/ducks_controller.rb	/^  def create$/;"	f	class:DucksController
 create	app/controllers/invoices_controller.rb	/^  def create$/;"	f	class:InvoicesController
 create	app/controllers/orders_controller.rb	/^  def create$/;"	f	class:OrdersController
+destroy	app/controllers/client_receipts_controller.rb	/^  def destroy$/;"	f	class:ClientReceiptsController
 destroy	app/controllers/clients_controller.rb	/^  def destroy$/;"	f	class:ClientsController
 destroy	app/controllers/ducks_controller.rb	/^  def destroy$/;"	f	class:DucksController
 destroy	app/controllers/invoices_controller.rb	/^  def destroy$/;"	f	class:InvoicesController
 destroy	app/controllers/orders_controller.rb	/^  def destroy$/;"	f	class:OrdersController
 development.rb	config/environments/development.rb	1;"	F
+devise.rb	config/initializers/devise.rb	1;"	F
 disposal_site.rb	app/models/disposal_site.rb	1;"	F
 disposal_site_test.rb	test/models/disposal_site_test.rb	1;"	F
+down	db/migrate/20160105081533_add_attachment_copy_to_client_receipts.rb	/^  def self.down$/;"	F	class:AddAttachmentCopyToClientReceipts
+down	db/migrate/20160106074520_add_devise_to_users.rb	/^  def self.down$/;"	F	class:AddDeviseToUsers
 duck.rb	app/models/duck.rb	1;"	F
 duck_params	app/controllers/ducks_controller.rb	/^    def duck_params$/;"	f	class:DucksController
 duck_test.rb	test/models/duck_test.rb	1;"	F
@@ -129,20 +162,24 @@ ducks.coffee	app/assets/javascripts/ducks.coffee	1;"	F
 ducks_controller.rb	app/controllers/ducks_controller.rb	1;"	F
 ducks_controller_test.rb	test/controllers/ducks_controller_test.rb	1;"	F
 ducks_helper.rb	app/helpers/ducks_helper.rb	1;"	F
+edit	app/controllers/client_receipts_controller.rb	/^  def edit$/;"	f	class:ClientReceiptsController
 edit	app/controllers/clients_controller.rb	/^  def edit$/;"	f	class:ClientsController
 edit	app/controllers/ducks_controller.rb	/^  def edit$/;"	f	class:DucksController
 edit	app/controllers/invoices_controller.rb	/^  def edit$/;"	f	class:InvoicesController
 edit	app/controllers/orders_controller.rb	/^  def edit$/;"	f	class:OrdersController
+edit.html.erb_spec.rb	spec/views/client_receipts/edit.html.erb_spec.rb	1;"	F
 edit.html.erb_spec.rb	spec/views/clients/edit.html.erb_spec.rb	1;"	F
 edit.html.erb_spec.rb	spec/views/invoices/edit.html.erb_spec.rb	1;"	F
 edit.html.erb_spec.rb	spec/views/orders/edit.html.erb_spec.rb	1;"	F
 environment.rb	config/environment.rb	1;"	F
 filter_parameter_logging.rb	config/initializers/filter_parameter_logging.rb	1;"	F
+index	app/controllers/client_receipts_controller.rb	/^  def index$/;"	f	class:ClientReceiptsController
 index	app/controllers/clients_controller.rb	/^  def index$/;"	f	class:ClientsController
 index	app/controllers/ducks_controller.rb	/^  def index$/;"	f	class:DucksController
 index	app/controllers/invoices_controller.rb	/^  def index$/;"	f	class:InvoicesController
 index	app/controllers/orders_controller.rb	/^  def index$/;"	f	class:OrdersController
 index	app/controllers/trucks_controller.rb	/^  def index$/;"	f	class:TrucksController
+index.html.erb_spec.rb	spec/views/client_receipts/index.html.erb_spec.rb	1;"	F
 index.html.erb_spec.rb	spec/views/clients/index.html.erb_spec.rb	1;"	F
 index.html.erb_spec.rb	spec/views/invoices/index.html.erb_spec.rb	1;"	F
 index.html.erb_spec.rb	spec/views/orders/index.html.erb_spec.rb	1;"	F
@@ -163,10 +200,12 @@ line_item_test.rb	test/models/line_item_test.rb	1;"	F
 material.rb	app/models/material.rb	1;"	F
 material_test.rb	test/models/material_test.rb	1;"	F
 mime_types.rb	config/initializers/mime_types.rb	1;"	F
+new	app/controllers/client_receipts_controller.rb	/^  def new$/;"	f	class:ClientReceiptsController
 new	app/controllers/clients_controller.rb	/^  def new$/;"	f	class:ClientsController
 new	app/controllers/ducks_controller.rb	/^  def new$/;"	f	class:DucksController
 new	app/controllers/invoices_controller.rb	/^  def new$/;"	f	class:InvoicesController
 new	app/controllers/orders_controller.rb	/^  def new$/;"	f	class:OrdersController
+new.html.erb_spec.rb	spec/views/client_receipts/new.html.erb_spec.rb	1;"	F
 new.html.erb_spec.rb	spec/views/clients/new.html.erb_spec.rb	1;"	F
 new.html.erb_spec.rb	spec/views/invoices/new.html.erb_spec.rb	1;"	F
 new.html.erb_spec.rb	spec/views/orders/new.html.erb_spec.rb	1;"	F
@@ -191,20 +230,27 @@ production.rb	config/environments/production.rb	1;"	F
 rails	bin/rails	1;"	F
 rails_helper.rb	spec/rails_helper.rb	1;"	F
 rake	bin/rake	1;"	F
+register	app/controllers/users_controller.rb	/^  def register$/;"	f	class:UsersController
 routes.rb	config/routes.rb	1;"	F
 schema.rb	db/schema.rb	1;"	F
 seeds.rb	db/seeds.rb	1;"	F
 session_store.rb	config/initializers/session_store.rb	1;"	F
+set_client	app/controllers/client_receipts_controller.rb	/^    def set_client$/;"	f	class:ClientReceiptsController
 set_client	app/controllers/clients_controller.rb	/^    def set_client$/;"	f	class:ClientsController
+set_client	app/controllers/orders_controller.rb	/^    def set_client$/;"	f	class:OrdersController
+set_client_receipt	app/controllers/client_receipts_controller.rb	/^    def set_client_receipt$/;"	f	class:ClientReceiptsController
 set_duck	app/controllers/ducks_controller.rb	/^    def set_duck$/;"	f	class:DucksController
 set_invoice	app/controllers/invoices_controller.rb	/^    def set_invoice$/;"	f	class:InvoicesController
+set_order	app/controllers/client_receipts_controller.rb	/^    def set_order$/;"	f	class:ClientReceiptsController
 set_order	app/controllers/orders_controller.rb	/^    def set_order$/;"	f	class:OrdersController
 setup	bin/setup	1;"	F
+show	app/controllers/client_receipts_controller.rb	/^  def show$/;"	f	class:ClientReceiptsController
 show	app/controllers/clients_controller.rb	/^  def show$/;"	f	class:ClientsController
 show	app/controllers/ducks_controller.rb	/^  def show$/;"	f	class:DucksController
 show	app/controllers/invoices_controller.rb	/^  def show$/;"	f	class:InvoicesController
 show	app/controllers/orders_controller.rb	/^  def show$/;"	f	class:OrdersController
 show	app/controllers/trucks_controller.rb	/^  def show$/;"	f	class:TrucksController
+show.html.erb_spec.rb	spec/views/client_receipts/show.html.erb_spec.rb	1;"	F
 show.html.erb_spec.rb	spec/views/clients/show.html.erb_spec.rb	1;"	F
 show.html.erb_spec.rb	spec/views/invoices/show.html.erb_spec.rb	1;"	F
 show.html.erb_spec.rb	spec/views/orders/show.html.erb_spec.rb	1;"	F
@@ -219,10 +265,18 @@ truck_capacity.rb	app/models/truck_capacity.rb	1;"	F
 truck_capacity_test.rb	test/models/truck_capacity_test.rb	1;"	F
 truck_test.rb	test/models/truck_test.rb	1;"	F
 trucks_controller.rb	app/controllers/trucks_controller.rb	1;"	F
+up	db/migrate/20160105081533_add_attachment_copy_to_client_receipts.rb	/^  def self.up$/;"	F	class:AddAttachmentCopyToClientReceipts
+up	db/migrate/20160106074520_add_devise_to_users.rb	/^  def self.up$/;"	F	class:AddDeviseToUsers
+update	app/controllers/client_receipts_controller.rb	/^  def update$/;"	f	class:ClientReceiptsController
 update	app/controllers/clients_controller.rb	/^  def update$/;"	f	class:ClientsController
 update	app/controllers/ducks_controller.rb	/^  def update$/;"	f	class:DucksController
 update	app/controllers/invoices_controller.rb	/^  def update$/;"	f	class:InvoicesController
 update	app/controllers/orders_controller.rb	/^  def update$/;"	f	class:OrdersController
 user.rb	app/models/user.rb	1;"	F
 user_test.rb	test/models/user_test.rb	1;"	F
+users.coffee	app/assets/javascripts/users.coffee	1;"	F
+users_controller.rb	app/controllers/users_controller.rb	1;"	F
+users_controller_spec.rb	spec/controllers/users_controller_spec.rb	1;"	F
+users_helper.rb	app/helpers/users_helper.rb	1;"	F
+users_helper_spec.rb	spec/helpers/users_helper_spec.rb	1;"	F
 wrap_parameters.rb	config/initializers/wrap_parameters.rb	1;"	F
