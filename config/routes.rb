@@ -2,13 +2,11 @@ Rails.application.routes.draw do
 
   root 'clients#index'
   devise_for :users, path: 'sesion', path_names: { sign_in: 'entrar', sign_out: 'salir', confirmation: 'confirmar', registration: 'registrar' }, controllers: { registrations: 'registrations' }
-  resources :invoices
   resources :clients do
     resources :orders, except: [:index] do
       resources :client_receipts
     end
   end
-  resources :trucks, only: [:index, :show, :edit, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
