@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160106074520) do
+ActiveRecord::Schema.define(version: 20160109061046) do
 
   create_table "client_receipts", force: :cascade do |t|
     t.integer  "number",                limit: 4
@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(version: 20160106074520) do
   add_index "client_receipts", ["order_id"], name: "index_client_receipts_on_order_id", using: :btree
 
   create_table "clients", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "address",    limit: 255
-    t.text     "notes",      limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name",         limit: 255
+    t.string   "address",      limit: 255
+    t.text     "notes",        limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "phone_number", limit: 4
   end
 
   create_table "disposal_sites", force: :cascade do |t|

@@ -1,4 +1,6 @@
 <h2><%= @client.name %></h2>
+<h4>Telefono: <%= @client.phone_number %></h4>
+
 <h3>Ordenes</h3>
 <% @client.orders.order(:order_date).each do |order|  %>
   <%= link_to order.order_date, client_order_path(@client, order) %><br />
