@@ -2,18 +2,39 @@
   <h2>Orden <%= @order.order_date %> para <%= @order.client.name %></h2>
 
   <% if @order.client_receipt %>
-    <h3>Recibo #<%= @order.client_receipt.number %></h3>
-    Obra: <%= @order.worksite %><br />
-    Metros Cubicos: <%= @order.client_receipt.cubic_meters %><br />
-    Valor por Metro Cubico: <%= @order.client_receipt.value_per_cubic_meter %><br />
-    Fecha trabajado: <%= @order.client_receipt.date_worked %><br />
-    Copia Original: <p><%= image_tag @order.client_receipt.copy.url %></p>
+    <table class='table'>
+      <tr>
+        <th>Numero de Recibo</th>
+        <th>Obra</th>
+        <th>Metros Cubicos</th>
+        <th>Valor por Metro Cubico</th>
+        <th>Fecha trabajado</th>
+      </tr>
+      <tr>
+        <td><%= @order.client_receipt.number %></td>
+        <td><%= @order.worksite %></td>
+        <td><%= @order.client_receipt.cubic_meters %></td>
+        <td><%= @order.client_receipt.value_per_cubic_meter %></td>
+        <td><%= @order.client_receipt.date_worked %></td>
+      </tr>
+    </table>
+    <div>
+      <%= image_tag @order.client_receipt.copy.url(:medium) %>
+    </div>
   <% else %>
-    <%= link_to 'Crear Recibo', new_client_order_client_receipt_path(@client, @order) %>
+    <%= link_to 'Crear Recibo', new_client_order_client_receipt_path(@client, @order), class: 'btn btn-default' %>
   <% end %>
 
   <p id="notice"><%= notice %></p>
+  <div class='row'>
+    <% if @order.client_receipt %>
+    <div class="col-md-4">
+      <%= link_to 'Editar Recibo', edit_client_order_client_receipt_path(@order.client, @order, @order.client_receipt), class: 'btn btn-default' %>
+    </div>
+  <% end %>
+    <div class="col-md-4">
+      <%= link_to 'Editar Orden', edit_client_order_path(@order.client, @order), class: 'btn btn-default' %>
+    </div>
+  </div>
 
-  <%= link_to 'Edit', edit_client_order_path(@order.client, @order) %> |
-  <%= link_to 'Back', @client %>
 <% end %>

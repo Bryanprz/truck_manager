@@ -1,6 +1,5 @@
-<h1>Editing Client Receipt</h1>
+<%= main_layout do %>
+  <h1>Cambiar Recibo para Orden <%= @client_receipt.order.order_date %></h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @client_receipt %> |
-<%= link_to 'Back', client_receipts_path %>
+  <%= render 'form' %>
+<% end %>

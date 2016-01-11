@@ -1,3 +1,5 @@
-<h1>Nueva Orden Para <%= @client.name %></h1>
+<%= main_layout do %>
+  <h1>Nueva Orden Para <%= @client.name %></h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+<% end %>

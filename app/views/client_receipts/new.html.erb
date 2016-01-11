@@ -1,6 +1,7 @@
-<h1>Recibo para <%= @client.name %></h1>
-<h2>Orden <%= @order.order_date %></h2>
+<%= main_layout do %>
+  <h1>Recibo para <%= @client.name %></h1>
+  <h2>Orden <%= @order.order_date %></h2>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Back', client_order_client_receipts_path %>
+<% end %>

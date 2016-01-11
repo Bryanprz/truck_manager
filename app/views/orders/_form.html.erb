@@ -11,9 +11,15 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    Fecha que orden fue puesta: <%= f.date_select :order_date %><br />
-    Nombre de Obra: <%= f.text_field :worksite %><br />
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.label "Nombre de Obra" %><br />
+    <%= f.text_field :worksite, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+    <%= f.label "Fecha que orden fue puesta" %><br />
+    <%= f.date_select :order_date, class: "form-control" %>
+  </div>
+    <%= f.submit "Crear Orden", class: "btn btn-default" %>
 <% end %>
+

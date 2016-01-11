@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :number %><br>
+  <div class="form-group">
+    <%= f.label 'Numero' %><br>
     <%= f.number_field :number %>
   </div>
-  <div class="field">
-    <%= f.label :cubic_meters %><br>
+  <div class="form-group">
+    <%= f.label 'Metros Cubicos' %><br>
     <%= f.number_field :cubic_meters %>
   </div>
-  <div class="field">
-    <%= f.label :value_per_cubic_meter %><br>
+  <div class="form-group">
+    <%= f.label 'Valor por Metro Cubico' %><br>
     <%= f.text_field :value_per_cubic_meter %>
   </div>
-  <div class="field">
-    <%= f.label :date_worked %><br>
+  <div class="form-group">
+    <%= f.label 'Fecha Trabajada' %><br>
     <%= f.date_select :date_worked %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+    <%= f.label 'Foto de Recibo' %>
     <%= f.file_field :copy %> 
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Recibo", class: 'btn btn-default' %>
   </div>
 <% end %>

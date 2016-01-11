@@ -1,6 +1,6 @@
-<h1>Editing Order</h1>
+<%= main_layout do %>
+  <h1>Editing Order</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', client_order_path(@order.client, @order) %> |
-<%= link_to 'Back', client_orders_path %>
+<% end %>

@@ -44,7 +44,7 @@ class ClientReceiptsController < ApplicationController
   def update
     respond_to do |format|
       if @client_receipt.update(client_receipt_params)
-        format.html { redirect_to @client_receipt, notice: 'Client receipt was successfully updated.' }
+        format.html { redirect_to client_order_path(@client, @order), notice: 'Client receipt was successfully updated.' }
         format.json { render :show, status: :ok, location: @client_receipt }
       else
         format.html { render :edit }
