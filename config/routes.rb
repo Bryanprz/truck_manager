@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'clients#index'
-  devise_for :users, path: 'sesion', path_names: { sign_in: 'entrar', sign_out: 'salir', confirmation: 'confirmar', registration: 'registrar' }, controllers: { registrations: 'registrations' }
+  devise_for :users, path: 'sesion', path_names: { sign_in: 'entrar', sign_out: 'salir', confirmation: 'confirmar' }, controllers: { registrations: 'registrations' }
   resources :clients do
     resources :orders, except: [:index] do
       resources :client_receipts
