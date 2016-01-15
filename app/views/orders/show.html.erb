@@ -8,6 +8,7 @@
         <th>Obra</th>
         <th>Metros Cubicos</th>
         <th>Fecha trabajado</th>
+        <th>Botadero</th>
         <th>Valor por Metro Cubico</th>
       </tr>
       <tr>
@@ -15,6 +16,7 @@
         <td><%= @order.worksite %></td>
         <td><%= @order.client_receipt.cubic_meters %></td>
         <td><%= @order.client_receipt.date_worked %></td>
+        <td>Botadero va aqui</td>
         <td><%= @order.client_receipt.value_per_cubic_meter %></td>
       </tr>
     </table>
