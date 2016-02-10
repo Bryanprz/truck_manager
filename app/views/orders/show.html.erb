@@ -23,7 +23,7 @@
       </tr>
     </table>
     <div>
-      <%= image_tag @order.client_receipt.copy.url(:medium) %>
+      <%= image_tag @order.client_receipt.copy_url %>
     </div>
   <% else %>
     <%= link_to 'Crear Recibo', new_client_order_client_receipt_path(@client, @order), class: 'btn btn-default' %>
