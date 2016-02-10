@@ -2,6 +2,7 @@ class ClientReceiptsController < ApplicationController
   before_action :set_client_receipt, only: [:show, :edit, :update, :destroy]
   before_action :set_client
   before_action :set_order
+  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
 
   # GET /client_receipts
   # GET /client_receipts.json
@@ -77,8 +78,12 @@ class ClientReceiptsController < ApplicationController
       @order = Order.find(params[:order_id])
     end
 
+    def set_s3_direct_post
+      @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_receipt_params
-      params.require(:client_receipt).permit(:number, :cubic_meters, :value_per_cubic_meter, :date_worked, :order_id, :copy)
+      params.require(:client_receipt).permit(:number, :cubic_meters, :value_per_cubic_meter, :date_worked, :order_id, :copy_url)
     end
 end
