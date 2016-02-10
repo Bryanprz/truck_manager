@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109061046) do
+ActiveRecord::Schema.define(version: 20160210050038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160109061046) do
     t.string   "copy_content_type"
     t.integer  "copy_file_size"
     t.datetime "copy_updated_at"
+    t.string   "copy_url"
   end
 
   add_index "client_receipts", ["order_id"], name: "index_client_receipts_on_order_id", using: :btree
