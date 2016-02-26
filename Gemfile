@@ -32,6 +32,7 @@ gem 'paperclip', '~> 4.3.2'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.13'
 gem 'devise', '~> 3.5.3'
 gem 'lograge'
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
