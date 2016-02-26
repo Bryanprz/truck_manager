@@ -39,6 +39,11 @@
     <div class="col-md-4">
       <%= link_to 'Editar Orden', edit_client_order_path(@order.client, @order), class: 'btn btn-default' %>
     </div>
+    <div class="col-md-4">
+      <% if @order.client_receipt %>
+        <%= link_to 'Borrar Recibo', client_order_client_receipt_path(@client, @order, @order.client_receipt), method: :delete, data: { confirm: 'Estas seguro que quieres borrar este recibo?' }, class: 'btn btn-default' %>
+    <% end %>
+    </div>
   </div>
 
 <% end %>

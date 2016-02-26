@@ -59,7 +59,7 @@ class ClientReceiptsController < ApplicationController
   def destroy
     @client_receipt.destroy
     respond_to do |format|
-      format.html { redirect_to client_receipts_url, notice: 'Client receipt was successfully destroyed.' }
+      format.html { redirect_to client_order_path(@client, @order), notice: 'Recibo ha sido borrado.' }
       format.json { head :no_content }
     end
   end
