@@ -16,7 +16,7 @@
         <td><%= @order.client_receipt.number %></td>
         <td><%= @order.worksite %></td>
         <td><%= @order.client_receipt.date_worked %></td>
-        <td>Botadero va aqui</td>
+        <td><%= @order.client_receipt.dump_site %></td>
         <td><%= @order.client_receipt.cubic_meters %></td>
         <td><%= @order.client_receipt.value_per_cubic_meter %></td>
         <td><%= (@order.client_receipt.cubic_meters) * (@order.client_receipt.value_per_cubic_meter) %></td>
