@@ -32,7 +32,6 @@ gem 'paperclip', '~> 4.3.2'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.13'
 gem 'devise', '~> 3.5.3'
 gem 'lograge'
-gem 'better_errors', '~> 2.1', '>= 2.1.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,11 +43,15 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 # gem 'capistrano-rails', group: :development
 group :development, :test do
   gem 'pry'
+  gem 'pry-nav'
   gem 'rspec-rails', '~> 3.4.0'
   gem 'zeus', '~> 0.15.4'
   gem 'parallel_tests'
   gem 'zeus-parallel_tests'
   gem 'guard-rspec', require: false
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
 end
 
 group :test do
