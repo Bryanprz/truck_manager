@@ -4,6 +4,7 @@
   <% if @order.client_receipt %>
     <table class='table'>
       <tr>
+        <th>Pagado?</th>
         <th>Numero de Recibo</th>
         <th>Obra</th>
         <th>Fecha trabajado</th>
@@ -14,6 +15,7 @@
         <th>Total</th>
       </tr>
       <tr>
+        <td><%= @order.client_receipt.pagado? %></td>
         <td><%= @order.client_receipt.number %></td>
         <td><%= @order.worksite %></td>
         <td><%= @order.client_receipt.date_worked %></td>

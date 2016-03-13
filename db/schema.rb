@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160313011420) do
+ActiveRecord::Schema.define(version: 20160313034125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160313011420) do
     t.string   "copy_url"
     t.string   "dump_site"
     t.float    "dump_site_value"
+    t.boolean  "paid"
   end
 
   add_index "client_receipts", ["order_id"], name: "index_client_receipts_on_order_id", using: :btree

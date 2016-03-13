@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.label 'Foto de Recibo' %>
+    <%= f.file_field :copy_url %>
+  </div>
+  <div class="form-group">
     <%= f.label 'Numero' %><br>
     <%= f.number_field :number %>
   </div>
@@ -35,11 +39,11 @@
     <%= f.label 'Fecha Trabajada' %><br>
     <%= f.date_select :date_worked %>
   </div>
-
   <div class="form-group">
-    <%= f.label 'Foto de Recibo' %>
-    <%= f.file_field :copy_url %>
+    <%= f.label 'Pagado?' %><br>
+    <%= f.check_box :paid %>
   </div>
+
   <div class="actions">
     <%= f.submit "Crear Recibo", class: 'btn btn-default' %>
   </div>
