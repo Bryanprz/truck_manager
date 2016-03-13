@@ -8,6 +8,7 @@
         <th>Obra</th>
         <th>Fecha trabajado</th>
         <th>Botadero</th>
+        <th>Valor de Botadero</th>
         <th>Metros Cubicos</th>
         <th>Valor por Metro Cubico</th>
         <th>Total</th>
@@ -17,6 +18,7 @@
         <td><%= @order.worksite %></td>
         <td><%= @order.client_receipt.date_worked %></td>
         <td><%= @order.client_receipt.dump_site %></td>
+        <td><%= @order.client_receipt.dump_site_value %></td>
         <td><%= @order.client_receipt.cubic_meters %></td>
         <td><%= @order.client_receipt.value_per_cubic_meter %></td>
         <td><%= (@order.client_receipt.cubic_meters) * (@order.client_receipt.value_per_cubic_meter) %></td>
