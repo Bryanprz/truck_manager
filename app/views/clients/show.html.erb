@@ -16,7 +16,7 @@
         <tbody>
           <% orders.each do |order| %>
             <tr>
-              <td><%= link_to order.order_date, client_order_path(@client, order) %></td>
+              <td class="main-cell"><%= link_to order.order_date, client_order_path(@client, order) %></td>
               <td><%= link_to order.worksite, client_order_path(@client, order) %></td>
             </tr>
           <% end %>
