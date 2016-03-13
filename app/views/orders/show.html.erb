@@ -1,5 +1,5 @@
 <%= main_layout do %>
-  <h2>Orden <%= @order.order_date %> para <%= @order.client.name %></h2>
+  <h2>Orden <%= @order.order_date %> para <%= link_to @order.client.name, client_path(@order.client) %></h2>
 
   <% if @order.client_receipt %>
     <table class='table'>

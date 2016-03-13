@@ -1,32 +1,29 @@
 <%= main_layout do %>
-  <h2><%= @client.name %></h2>
-  <h4>Telefono: <%= @client.phone_number %></h4>
-
-  <h3>Ordenes</h3>
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <td>Fecha de Orden</td>
-          <td>Obra de Trabajo</td>
-        </tr>
-      </thead>
-      <tbody>
-        <% @client.orders.order(:order_date).each do |order|  %>
-          <tr>
-            <td>
-              <%= link_to order.order_date, client_order_path(@client, order) %>
-            </td>
-            <td>
-              <%= order.worksite %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-
   <p id="notice"><%= notice %></p>
+
+  <h2><%= @client.name %></h2>
+  <p><%= @client.phone_number %></p>
+
+  <% @client.orders.group_by(&:week).sort.each do |week, orders| %>
+    <div>
+      <table class="table table-responsive table-hover">
+        <thead>
+          <tr>
+          <th><%= orders.first.order_date.beginning_of_week.strftime('%B %d, %Y') %> - <%= orders.first.order_date.end_of_week.strftime('%B %d, %Y') %></th>
+            <th>Obra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% orders.each do |order| %>
+            <tr>
+              <td><%= link_to order.order_date, client_order_path(@client, order) %></td>
+              <td><%= link_to order.worksite, client_order_path(@client, order) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
 
   <div class="row">
     <div class="col-md-8">
