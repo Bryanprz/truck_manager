@@ -4,6 +4,15 @@
   <h2><%= @client.name %></h2>
   <p><%= @client.phone_number %></p>
 
+  <table id="key" class="table table-condensed">
+    <tr>
+      <td class="success"><small>Orden pagada</small></td>
+      <td class="danger"><small>Orden no pagada</small></td>
+    </tr>
+  </table>
+
+  <hr />
+
   <% @client.orders.group_by(&:week).sort.each do |week, orders| %>
     <div>
       <table class="table table-responsive table-hover">
@@ -15,7 +24,7 @@
         </thead>
         <tbody>
           <% orders.each do |order| %>
-            <tr>
+            <tr class="<% if order.client_receipt && order.client_receipt.paid %><%= 'success' %><% else %><%= 'danger' %><% end %>">
               <td class="main-cell"><%= link_to order.order_date, client_order_path(@client, order) %></td>
               <td><%= link_to order.worksite, client_order_path(@client, order) %></td>
             </tr>
@@ -24,6 +33,8 @@
       </table>
     </div>
   <% end %>
+
+  <hr />
 
   <div class="row">
     <div class="col-md-8">
@@ -34,3 +45,6 @@
     </div>
   </div>
 <% end %>
+
+<br />
+
